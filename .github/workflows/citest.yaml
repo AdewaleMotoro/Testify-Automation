@@ -1,0 +1,18 @@
+# Controls when the workflow will run
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Echo GitHub event
+        run: echo "* The job was automatically triggered by a ${GITHUB_EVENT_NAME} event"
+
+      # Run your Python script
+      - name: Run Python script
+        run: python main.py
