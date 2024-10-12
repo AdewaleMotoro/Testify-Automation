@@ -1,9 +1,7 @@
 const number = 3;
-if (number % 2 == 0) {
-    console.log(number + "is even")
-    
+
+if (number % 2 === 0) {
+    console.log(number + ' is even');
 } else {
-    (number + "is odd")
-
-} 
-
+    console.log(number + ' is odd');
+}
